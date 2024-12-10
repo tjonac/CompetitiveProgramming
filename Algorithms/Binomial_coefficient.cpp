@@ -1,6 +1,7 @@
 vector<ll> factorial(1e6);
 
 ll inv(ll a) {
+  a%=mod;
   return a <= 1 ? a : mod- (long long)(mod/a) * inv(mod % a) % mod;
 }
 ll bin(int n, int k) {

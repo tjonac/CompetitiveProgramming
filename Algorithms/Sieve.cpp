@@ -3,9 +3,12 @@ int sieve[kMaxV+1];
 //Array with the smallest prime that divides i, 0 if i is prime.
 void primes(){
   for(int i=4;i<=kMaxV;i+=2) sieve[i]=2;
-  for(int i=3;i<=kMaxV;i++){
+  for(int i=3;i<=kMaxV/i;i++){
     if(sieve[i]) continue;
-    for(int j=i*i;j<=kMaxV;j+=i) sieve[j]=i;
+    for(int j=i*i;j<=kMaxV;j+=i){
+      if(sieve[j]) continue;
+      sieve[j]=i;
+    }
   }
 }
 
