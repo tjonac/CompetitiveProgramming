@@ -1,18 +1,12 @@
-ll binexp(ll a, ll b){
-  ll res=1;
-  while(b>0){
-    if(b&1){
-      res*=a;
-      res%=mod;
-    }
-    a*=a;
-    a%=mod;
-    b>>=1;
-  }
-  return res;
-}
-//binary matrix exponentation
-//performs mxp pxn matrix mult
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define ll long long
+#define MOD 998244353
+#define mod 1000000007
+#define INF 1000000000000000
+#define f first 
+#define s second
 vector<vector<ll>> mul(vector<vector<ll>> a, vector<vector<ll>> b) {
 	int m=a.size(),p=a[0].size(),n=b[0].size();
     vector<vector<ll>> res(m,vector<ll> (n,0));
@@ -36,4 +30,20 @@ vector<vector<ll>> matexp(vector<vector<ll>> a, int k){
         aux=mul(aux,aux);
     }
     return ans;
+}
+void solve(){
+    int n; cin>>n;
+    vector<int> v((1<<n)-1);
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<(1<<n)-1;j++){
+            if(v[j]) continue;
+            for(int k=0;k<(1<<n)-1;k+=(1<<i)) v[k+j]=i;
+            break;
+        }
+    }
+    for(auto&u:v) cout<<u<<' ';
+}
+int main() {
+  ios_base::sync_with_stdio(false);  cin.tie(0);  cout.tie(0);
+  int t=1; for(int T=0;T<t;T++) solve();
 }
