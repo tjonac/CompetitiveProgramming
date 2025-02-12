@@ -1,3 +1,4 @@
+//O(nloglogn)
 const int kMaxV=1e6;
 int sieve[kMaxV+1];
 //Array with the smallest prime that divides i, 0 if i is prime.
@@ -13,7 +14,7 @@ void primes(){
 }
 
 //Vector with all prime factors that divides x (without their exponents)
-
+//logn
 vector<int> PrimeFactors(int x){
   if(x==1) return {};
   unordered_set<int> primes;
