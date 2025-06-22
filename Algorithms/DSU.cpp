@@ -18,7 +18,7 @@ void union_sets(int a, int b) { //O(logn)
   b = find_set(b);
   if (a != b) {
     if (size[a] < size[b])
-       swap(a, b);
+      swap(a, b);
       parent[b] = a;
       size[a] += size[b];
   }
