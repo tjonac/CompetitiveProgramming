@@ -6,15 +6,17 @@ using namespace std;
 #define mod 1000000007
 
 void solve(){
-    int n; cin>>n;
-    int ones=0, zeros=0;
-    for(int i=0;i<n;i++){
-        int a; cin>>a;
-        if(a%2) ones++;
-        else zeros++;
+    int a,b,c,d; cin>>a>>b>>c>>d;
+    if(c<=a){
+        if(d<=a) cout<<0;
+        else if(a<=d && d<=b) cout<<d-a;
+        else cout<<b-a;
     }
-    if(zeros) cout<<ones+1;
-    else cout<<ones-1;
+    else if(c>=a && c<=b){
+        if(d<=b) cout<<d-c;
+        else cout<<b-c;
+    }
+    else cout<<0;
     cout<<'\n';
 }
 

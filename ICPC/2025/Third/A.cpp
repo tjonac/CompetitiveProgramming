@@ -7,18 +7,20 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    int ones=0, zeros=0;
+    int s=0;
     for(int i=0;i<n;i++){
         int a; cin>>a;
-        if(a%2) ones++;
-        else zeros++;
+        s+=a;
     }
-    if(zeros) cout<<ones+1;
-    else cout<<ones-1;
-    cout<<'\n';
+    for(int i=0;i<n;i++){
+        if(s%(n-i)==0){
+            cout<<i;
+            return;
+        }
+    }
 }
 
 int main(){
     ios_base::sync_with_stdio(false);  cin.tie(0);  cout.tie(0);
-    int t; cin>>t; for(int T=0;T<t;T++) solve();
+    int t=1; for(int T=0;T<t;T++) solve();
 }
