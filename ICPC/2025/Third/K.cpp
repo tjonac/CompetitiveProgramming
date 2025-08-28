@@ -6,7 +6,7 @@ using namespace std;
 #define mod 1000000007
 
 void solve(){
-    int a,b,c,d; cin>>a>>b>>c>>d;
+    ll a,b,c,d; cin>>a>>b>>c>>d;
     if(c<=a){
         if(d<=a) cout<<0;
         else if(a<=d && d<=b) cout<<d-a;
