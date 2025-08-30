@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
 int x[400000] = {1000000001};
 int k; //k is the least exp of 2 st 1<<k>=n
 //sets b in pos a

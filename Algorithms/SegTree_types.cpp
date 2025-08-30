@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long 
+#define MOD 998244353
 struct sum_t{
   ll val;
   static const long long null_v = 0;
@@ -30,6 +34,10 @@ struct linear_f{
 
   ll eval(ll x){
     return ((inv(a)*x-b*inv(a))%MOD+MOD)%MOD;
+  }
+  ll inv(ll a) {
+    a%=MOD;
+    return a <= 1 ? a : MOD- (long long)( MOD/a) * inv(MOD % a) % MOD;
   }
 
 };

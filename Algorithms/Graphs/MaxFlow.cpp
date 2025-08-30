@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// O(NE^2)
+
 const int NMAX=202;
 vector<vector<int>> adj(NMAX), capacity(NMAX,vector<int> (NMAX));
 

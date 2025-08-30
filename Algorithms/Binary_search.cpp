@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
 //returns upper_bound for a non decreasing vector
 int bin_search(int target,vector<int>& a, int l, int r){
   int res=-1;

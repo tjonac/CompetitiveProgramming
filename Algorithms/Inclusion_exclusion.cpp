@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
 //Find the number of multiples of k primes less than or equal to n
 ll solve(){
   ll n,ans=0,a; cin>>n;
