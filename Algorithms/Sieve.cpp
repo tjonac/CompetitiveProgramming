@@ -25,6 +25,8 @@ vector<int> PrimeFactors(int x){
   primes.insert(x);
   return {primes.begin(),primes.end()};
 }
+
+
 //linear sieve.
 vector <int> prime;
 bool is_composite[MAXN];
