@@ -22,9 +22,9 @@ int dfs(int s,vector<vector<int>>& adj){
 }
 void solve(){
   int n; cin>>n;
+  vector<bool> visited(n+1,false);
   for(int i=1;i<=n;i++) toleaf[i]=MAX;
   for(int i=1;i<=n;i++) dist[i]=MAX;
-  for(int i=1;i<=n;i++) visited[i]=false;
   vector<vector<int>> adj(n+1);
   for(int i=2;i<=n;i++){
     int a; cin>>a;

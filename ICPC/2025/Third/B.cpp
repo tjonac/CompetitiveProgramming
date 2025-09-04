@@ -6,18 +6,13 @@ using namespace std;
 #define mod 1000000007
 
 void solve(){
-    int n; cin>>n;
-    int s=0;
-    for(int i=0;i<n;i++){
-        int a; cin>>a;
-        s+=a;
+    ll n; cin>>n;
+    ll ans=0;
+    for(ll i=0;i<n;i++){
+        ll a; cin>>a;
+        ans+=(i+1)*a*(n-i);
     }
-    for(int i=0;i<n;i++){
-        if(s%(n-i)==0){
-            cout<<i;
-            return;
-        }
-    }
+    cout<<ans;
 }
 
 int main(){

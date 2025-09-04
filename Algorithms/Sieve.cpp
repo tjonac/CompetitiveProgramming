@@ -1,3 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define MOD 998244353
+#define mod 1000000007
+
+
 //O(nloglogn)
 const int kMaxV=1e6;
 int sieve[kMaxV+1];
@@ -28,10 +35,11 @@ vector<int> PrimeFactors(int x){
 
 
 //linear sieve.
+const int MAXN = 1e6;
 vector <int> prime;
 bool is_composite[MAXN];
 
-void sieve (int n) {
+void lsieve (int n) {
 	std::fill (is_composite, is_composite + n, false);
 	for (int i = 2; i < n; ++i) {
 		if (!is_composite[i]) prime.push_back (i);

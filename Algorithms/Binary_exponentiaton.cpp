@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define mod 1000000007
 ll binexp(ll a, ll b){
   ll res=1;
   while(b>0){
